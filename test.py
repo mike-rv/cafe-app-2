@@ -70,10 +70,27 @@
             
 # print(products_list)
 
-import csv
+# import csv
 
-# csv_file = 'products.csv'def is_csv_empty(csv_file):
+# # csv_file = 'products.csv'def is_csv_empty(csv_file):
 
-csv_file = open("products.csv")  
+# csv_file = open("products.csv")  
 
-print(csv_file)
+# print(csv_file)
+
+# import pyinputplus as ip
+
+# def user_choice():
+# listing = [{'a': 'cat','b': 'dog', 'c': 'rabbit', 'd': 'fish', 'e': 'hamster'}, {'a': 'cow','b': 'dog', 'c': 'rabbit', 'd': 'fish', 'e': 'hamster'}]
+# user_input = ip.inputChoice([''.join([(v) for k, v in record.items() if k == 'a']) for record in listing])
+    # return user_input
+# listing = ['a: 1','b', 'c', 'd', 'e']
+# user_input = ip.inputMenu(listing, numbered=True)
+# print(user_input)
+
+# def test():
+#     for i in range(4):
+#         print(i)
+
+
+

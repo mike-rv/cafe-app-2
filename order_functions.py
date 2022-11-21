@@ -2,6 +2,10 @@ import extra_functions as x
 import file_handlers as fh
 import cafe_app as a
 
+def add_product_ids(id_str_list, id, temp_dict, key):
+    id_str_list += id + ","
+    temp_dict[key] = id_str_list[:-1]
+    return temp_dict[key]
 
 def create_order(list_type, menu_type):
     temp_dict = {
@@ -31,8 +35,13 @@ def create_order(list_type, menu_type):
                     if not product_id_info:
                         a.incorrect_input()
                     else:
-                        id_str_list += id + ","
-                        temp_dict[key] = id_str_list[:-1]
+                        # print("id str list=", id_str_list , "id=", id)
+                        # print("temp_dict[key]=", temp_dict[key] ,"id_str_list[:-1]=", id_str_list[:-1])
+                        
+                        
+                        add_product_ids(id_str_list, id, temp_dict, key)
+                        # id_str_list += id + ","
+                        # temp_dict[key] = id_str_list[:-1]
             elif key == "courier_id":
                 for courier in fh.couriers_list:
                     print(courier)

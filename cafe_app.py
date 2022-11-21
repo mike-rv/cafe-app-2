@@ -19,20 +19,20 @@ def main_menu():
 >>> """
     )
     if cmd == "0":
-        with open("products.csv", "w") as products:
+        with open("data\products.csv", "w") as products:
             writer = csv.writer(products, delimiter=",")
             if fh.products_list:
                 writer.writerow(list(fh.products_list[1].keys()))
             for i in range(len(fh.products_list)):
                 writer.writerow(list(fh.products_list[i].values()))
-        with open("couriers.csv", "w") as couriers:
+        with open("data\couriers.csv", "w") as couriers:
             writer = csv.writer(couriers, delimiter=",")
             if fh.couriers_list:
                 writer.writerow(list(fh.couriers_list[1].keys()))
             for i in range(len(fh.couriers_list)):
                 writer.writerow(list(fh.couriers_list[i].values()))
 
-        with open("orders.csv", "w") as orders:
+        with open("data\orders.csv", "w") as orders:
             writer = csv.writer(orders, delimiter=",")
             if fh.orders_list:
                 writer.writerow(list(fh.orders_list[1].keys()))

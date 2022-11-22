@@ -113,10 +113,10 @@ def test_enter_sub_menu_exit_exit(monkeypatch):
 
 class TestCsvFunctions:
     def test_is_csv_empty(self):
-        assert fh.is_csv_empty('file_not_empty.csv') == False
+        assert fh.is_csv_empty('data/file_not_empty.csv') == False
 
     def test_is_csv_not_empty(self):
-        assert fh.is_csv_empty('file_empty.csv') == True
+        assert fh.is_csv_empty('data/file_empty.csv') == True
 
 # def test_count_bmi(monkeypatch):
 #     inputs = 1

@@ -138,6 +138,19 @@ def update(list_type, menu_type):
 def delete_record(list_type, index):
     return list_type.remove(list_type[index])
 
+def update_id_index(item, key, index):
+                            return item.update(
+                            {
+                                "product_id_index": ",".join(
+                                    [
+                                        value
+                                        for value in [*item[key]]
+                                        if value != "," and value != str(index + 1)
+                                    ]
+                                )
+                            }
+                        )
+
 def delete(list_type, menu_type):
     if len(list_type) == 0:
         view_list(list_type, menu_type)
@@ -164,6 +177,10 @@ def delete(list_type, menu_type):
                         and key == "product_id_index"
                         and str(index + 1) in item[key]
                     ):
+                        # print(f"key={key}, index={index}")
+                        # print(f"item={item}")
+                        # update_id_index(item, key, index)
+                        # print(item)
                         item.update(
                             {
                                 "product_id_index": ",".join(

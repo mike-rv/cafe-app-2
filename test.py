@@ -130,3 +130,8 @@
 #     return whole_list
 
 # print(print_whole_list(list_type))
+print(f"key={key}, index={index}")
+                        print(f"item={item}")
+                        update_id_index(item, key, index)
+                        print(f"key={key}, index={index}")
+                        print(f"item={item}")

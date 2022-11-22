@@ -4,7 +4,7 @@ import extra_functions as x
 import cafe_app as a
 import file_handlers as fh
 from io import StringIO
-
+from unittest import mock
 
 @pytest.mark.parametrize(
     'dict_record, expected',

@@ -38,3 +38,4 @@ To run the app input the following commands:
 - .venv\Scripts\activate (for windows)
 - source .venv/bin/activate (for mac)
 - pip install -r requirements.txt
+- python run_app.py

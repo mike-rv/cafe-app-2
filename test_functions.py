@@ -99,7 +99,10 @@ def test_delete_record():
     expected = None
     assert x.delete_record(list_type, index) == expected
     
-    
+def test_delete_order_record():
+    order_number = 0
+    expected = None
+    assert x.delete_order_record(order_number) == expected    
         
 def test_exit_main_menu(monkeypatch):
     inputs = StringIO('0\n')

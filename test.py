@@ -92,12 +92,41 @@
 #     for i in range(4):
 #         print(i)
 
-list_type = [1,2,3,4,5,6,7,8,9,10]
+# def test_count_bmi(monkeypatch):
+#     inputs = 1
+#     with monkeypatch.context() as m:
+#         m.setattr('builtins.input', lambda x: inputs)
+#         assert t.user_choice() == inputs
 
-def print_whole_list(list_type):
-    whole_list = ""
-    for item in list_type:
-        whole_list += f"{item}\n"
-    return whole_list
+# @mock.patch("builtins.input", return_value="g")
+# def test_user_choice_incorrect_input(monkeypatch: MonkeyPatch): 
+#     assert t.user_choice() == AssertionError
 
-print(print_whole_list(list_type))
+# @mock.patch("builtins.input", return_value="1")
+# def test_user_choice_correct_input(monkeypatch: MonkeyPatch): 
+# #     assert t.user_choice() == "cat"
+
+
+# @mock.patch("builtins.print", return_value="hello")
+# def test_user_choice_correct_input(monkeypatch: MonkeyPatch): 
+#     assert t.test() == "hello"
+
+
+# @patch.dict(foo, {"is_active": True})
+# def test():
+#     assert foo['is_active'] == True
+
+# temp_dict = {"id": 1, "name": "", "price": ""}
+# @patch.dict(temp_dict, {"id": 1})
+# def test_create_modify_id():
+#     assert x.create_modify_id() == {"id": "", "name": "", "price": ""}
+
+# list_type = [1,2,3,4,5,6,7,8,9,10]
+
+# def print_whole_list(list_type):
+#     whole_list = ""
+#     for item in list_type:
+#         whole_list += f"{item}\n"
+#     return whole_list
+
+# print(print_whole_list(list_type))

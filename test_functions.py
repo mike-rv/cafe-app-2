@@ -116,31 +116,3 @@ class TestCsvFunctions:
     def test_is_csv_not_empty(self):
         assert fh.is_csv_empty('data/file_empty.csv') == True
 
-# def test_count_bmi(monkeypatch):
-#     inputs = 1
-#     with monkeypatch.context() as m:
-#         m.setattr('builtins.input', lambda x: inputs)
-#         assert t.user_choice() == inputs
-
-# @mock.patch("builtins.input", return_value="g")
-# def test_user_choice_incorrect_input(monkeypatch: MonkeyPatch): 
-#     assert t.user_choice() == AssertionError
-
-# @mock.patch("builtins.input", return_value="1")
-# def test_user_choice_correct_input(monkeypatch: MonkeyPatch): 
-# #     assert t.user_choice() == "cat"
-
-
-# @mock.patch("builtins.print", return_value="hello")
-# def test_user_choice_correct_input(monkeypatch: MonkeyPatch): 
-#     assert t.test() == "hello"
-
-
-# @patch.dict(foo, {"is_active": True})
-# def test():
-#     assert foo['is_active'] == True
-
-# temp_dict = {"id": 1, "name": "", "price": ""}
-# @patch.dict(temp_dict, {"id": 1})
-# def test_create_modify_id():
-#     assert x.create_modify_id() == {"id": "", "name": "", "price": ""}

@@ -81,7 +81,7 @@ def update_order_status(list_type, menu_type):
                     input(
                         """To change status, input: 
 1 for preparing
-2 for dispatched
+2 for out-for-delivery
 3 for delivered
 4 to return to menu \n"""
                     )
@@ -94,10 +94,10 @@ def update_order_status(list_type, menu_type):
                         fh.orders_list[order_number].update({"status": "preparing"})
                         x.view_list(list_type, menu_type)
                 elif order_number_status == 2:
-                    if fh.orders_list[order_number]["status"] == "dispatched":
-                        print("Status already set to dispatched")
+                    if fh.orders_list[order_number]["status"] == "out-for-delivery":
+                        print("Status already set to out-for-delivery")
                     else:
-                        fh.orders_list[order_number].update({"status": "dispatched"})
+                        fh.orders_list[order_number].update({"status": "out-for-delivery"})
                         x.view_list(list_type, menu_type)
                 elif order_number_status == 3:
                     if fh.orders_list[order_number]["status"] == "delivered":

@@ -138,14 +138,6 @@ class TestCsvFunctions:
 #     assert t.test() == "hello"
 
 
-
-# @pytest.mark.parametrize(
-#     'temp_dict, expected',
-#     [({"id": 1}, {"id": "2"}
-# #     )])
-# def mock_id():
-#     return {"id": 1, "name": "", "price": ""}
-
 # @patch.dict(foo, {"is_active": True})
 # def test():
 #     assert foo['is_active'] == True

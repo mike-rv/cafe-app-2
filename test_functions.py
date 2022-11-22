@@ -32,6 +32,11 @@ def test_print_whole_list(monkeypatch: MonkeyPatch):
     list_type = []
     expected = "{'id': 'co1e', 'name': 'coke', 'price': '1.0'}"
     assert x.print_whole_list(list_type) == expected
+    
+@mock.patch("builtins.print", return_value={'customer_name': 'Max', 'customer_address': 'Thun_project/cafe_app_project_2 (main)derdome, Desert Apocalypse', 'customer_phone_number': '035435435', 'product_id_index': '', 'courier_id': '', 'status': 'preparing'})
+def test_orders_list(monkeypatch: MonkeyPatch):
+    expected = {'customer_name': 'Max', 'customer_address': 'Thun_project/cafe_app_project_2 (main)derdome, Desert Apocalypse', 'customer_phone_number': '035435435', 'product_id_index': '', 'courier_id': '', 'status': 'preparing'}
+    assert x.print_orders_list() == expected
 
 def test_create_temp_dict_happy_path():
     menu_type = "product"

@@ -1,6 +1,4 @@
 customer_name,customer_address,customer_phone_number,product_id_index,courier_id,status
-Patrick,"PPP Zone, London",0800111111,,,dispatched
-Max,"Thunderdome, Desert Apocalypse",035435435,,,preparing
 Sheikh,East Endz,06540560,,,delivered
 Spiderman,"Some neighbourhood, NYC",2432498070,,,preparing
 Dave,Dave's house,05340354,,,preparing

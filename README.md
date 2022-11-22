@@ -31,3 +31,10 @@ Test driven development. My code was hard to test when the requirements for test
 What did you most enjoy implementing?
 
 Coding the creation of ids in the order product_id_index dictionary key. I implemented a way to choose either one or multiple product ids and add them to the product_id_index order dictionary key. This involved adding actual keys for the products. An id would be removed if the product was deleted.
+
+To run the app input the following commands:
+
+- python -m venv .venv
+- .venv\Scripts\activate (for windows)
+- source .venv/bin/activate (for mac)
+- pip install -r requirements.txt

@@ -145,8 +145,11 @@ def delete(list_type, menu_type):
         for index, order in enumerate(fh.orders_list):
             print(index, order)
         order_number = ip.inputInt("Input number of order you would like to delete\n")
-        fh.orders_list.remove(fh.orders_list[order_number])
-            # del fh.orders_list[order_number]
+        def delete_order_record(order_number):
+            return fh.orders_list.remove(fh.orders_list[order_number])
+        delete_order_record(order_number) 
+        # fh.orders_list.remove(fh.orders_list[order_number])
+        # del fh.orders_list[order_number]
             
         view_list(list_type, menu_type)
     else:

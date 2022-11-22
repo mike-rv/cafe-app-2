@@ -1,6 +1,5 @@
 import csv
 
-
 def is_csv_empty(csv_file):
     with open(csv_file) as csv_file_reader:
         reader = csv.reader(csv_file_reader)

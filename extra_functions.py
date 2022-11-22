@@ -1,15 +1,19 @@
 import cafe_app as a
 import file_handlers as fh
 import pyinputplus as ip
-from collections import OrderedDict
+
+def print_whole_list(list_type):
+    whole_list = ""
+    for item in list_type:
+        whole_list += f"{item}\n"
+    return print(whole_list)
 
 def view_list(list_type, menu_type):
     if len(list_type) == 0:
         print(f"{menu_type.title()} list is empty.\n")
         a.sub_menu(list_type, menu_type)
     else:
-        for item in list_type:
-            print(item)
+        print_whole_list(list_type)
         a.sub_menu(list_type, menu_type)
         
 def id_generator_create(temp_dict):
@@ -25,10 +29,6 @@ def id_generator_create(temp_dict):
                     if key == "name"
                 ])
     return temp_dict
-
-def input_create_name():
-    input_info_str = ip.inputStr("Input name\n")
-    return input_info_str
 
 def create_temp_dict(menu_type, temp_dict):
     if menu_type == "product":
@@ -57,8 +57,6 @@ def create(list_type, menu_type):
     temp_dict = {}
     create_temp_dict(menu_type, temp_dict)
     input_info_str = ""
-    # input_create_name()
-    
     input_info_str = ip.inputStr("Input name\n")
     create_name(temp_dict, input_info_str)
     if menu_type == "product":

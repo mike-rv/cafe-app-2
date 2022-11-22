@@ -92,5 +92,12 @@
 #     for i in range(4):
 #         print(i)
 
+list_type = [1,2,3,4,5,6,7,8,9,10]
 
+def print_whole_list(list_type):
+    whole_list = ""
+    for item in list_type:
+        whole_list += f"{item}\n"
+    return whole_list
 
+print(print_whole_list(list_type))

@@ -4,10 +4,6 @@ import extra_functions as x
 import cafe_app as a
 import file_handlers as fh
 from io import StringIO
-import test as t
-from unittest.mock import patch
-from unittest import mock
-import order_functions as of
 
 
 @pytest.mark.parametrize(
@@ -31,9 +27,11 @@ def test_id_generator_create_bad_path(dict_record, expected):
     with pytest.raises(AssertionError):
         assert x.id_generator_create(dict_record) == expected
         
-# @mock.patch("builtins.input", return_value="1")
-# def test_user_choice_correct_input(monkeypatch: MonkeyPatch): 
-#     assert t.user_choice() == "cat"
+@mock.patch("builtins.print", return_value="{'id': 'co1e', 'name': 'coke', 'price': '1.0'}")
+def test_print_whole_list(monkeypatch: MonkeyPatch): 
+    list_type = []
+    expected = "{'id': 'co1e', 'name': 'coke', 'price': '1.0'}"
+    assert x.print_whole_list(list_type) == expected
 
 def test_create_temp_dict_happy_path():
     menu_type = "product"

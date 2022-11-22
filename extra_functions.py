@@ -12,6 +12,9 @@ def view_list(list_type, menu_type):
     if len(list_type) == 0:
         print(f"{menu_type.title()} list is empty.\n")
         a.sub_menu(list_type, menu_type)
+    elif menu_type == 'orders':
+        for order in fh.sorted_orders_list:
+            print(order)
     else:
         print_whole_list(list_type)
         a.sub_menu(list_type, menu_type)
@@ -148,11 +151,7 @@ def delete(list_type, menu_type):
         for index, order in enumerate(fh.orders_list):
             print(index, order)
         order_number = ip.inputInt("Input number of order you would like to delete\n")
-        
         delete_order_record(order_number) 
-        # fh.orders_list.remove(fh.orders_list[order_number])
-        # del fh.orders_list[order_number]
-            
         view_list(list_type, menu_type)
     else:
         for item in list_type:
@@ -164,8 +163,6 @@ def delete(list_type, menu_type):
                 None,
             )
             delete_record(list_type, index)
-            # for item in fh.orders_list:
-            #     print(item)  # checking to see if id deleted from id index
             view_list(list_type, menu_type)
         else:
             a.incorrect_input()

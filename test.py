@@ -130,8 +130,61 @@
 #     return whole_list
 
 # print(print_whole_list(list_type))
-print(f"key={key}, index={index}")
-                        print(f"item={item}")
-                        update_id_index(item, key, index)
-                        print(f"key={key}, index={index}")
-                        print(f"item={item}")
+# print(f"key={key}, index={index}")
+#                         print(f"item={item}")
+#                         update_id_index(item, key, index)
+#                         print(f"key={key}, index={index}")
+#                         print(f"item={item}")
+
+# # # updated product id index
+#             for item in fh.orders_list:
+#                 for key, _ in item.items():
+#                     if (
+#                         list_type == fh.products_list
+#                         and key == "product_id_index"
+#                         and str(index + 1) in item[key]
+#                     ):
+#                         # print(f"key={key}, index={index}")
+#                         # print(f"item={item}")
+#                         # update_id_index(item, key, index)
+#                         # print(item)
+#                         item.update(
+#                             {
+#                                 "product_id_index": ",".join(
+#                                     [
+#                                         value
+#                                         for value in [*item[key]]
+#                                         if value != "," and value != str(index + 1)
+#                                     ]
+#                                 )
+#                             }
+#                         )
+#                     elif (
+#                         list_type == fh.couriers_list
+#                         and key == "courier_id"
+#                         and str(index + 1) in item[key]
+#                     ):
+#                         item.update(
+#                             {
+#                                 "courier_id": ",".join(
+#                                     [
+#                                         value
+#                                         for value in [*item[key]]
+#                                         if value != "," and value != str(index + 1)
+#                                     ]
+#                                 )
+#                             }
+#                         )
+
+# def update_id_index(item, key, index):
+#                             return item.update(
+#                             {
+#                                 "product_id_index": ",".join(
+#                                     [
+#                                         value
+#                                         for value in [*item[key]]
+#                                         if value != "," and value != str(index + 1)
+#                                     ]
+#                                 )
+#                             }
+#                         )

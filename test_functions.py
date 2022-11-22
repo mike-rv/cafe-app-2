@@ -100,14 +100,7 @@ def test_delete_record():
     assert x.delete_record(list_type, index) == expected
     
     
-def test_update_id_index():
-    item = {'customer_name': 'Patrick', 'customer_address': 'PPP Zone, London', 'customer_phone_number': '0800111111', 'product_id_index': 'bb4a', 'courier_id': 'DH5L', 'status': 'dispatched'}
-    key = "product_id_index"
-    index = 3
-    expected ={'customer_name': 'Patrick', 'customer_address': 'PPP Zone, London', 'customer_phone_number': '0800111111', 'product_id_index': 'bb4a', 'courier_id': 'DH5L', 'status': 'dispatched'}
-    assert x.update_id_index(item, key, index) == expected
-    
-    
+        
 def test_exit_main_menu(monkeypatch):
     inputs = StringIO('0\n')
     monkeypatch.setattr('sys.stdin', inputs)

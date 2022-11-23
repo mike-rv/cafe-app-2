@@ -57,6 +57,9 @@ def create_phone_num(temp_dict, input_info_int):
     temp_dict["phone_number"] = input_info_int
     return temp_dict
 
+def sort_temp_dict(temp_dict):
+        return {key: value for key, value in sorted(temp_dict.items())}
+
 def append_to_dict_to_list(list_type, temp_dict):
     list_type.append(temp_dict)
     return list_type
@@ -74,7 +77,7 @@ def create(list_type, menu_type):
         input_info_str = ip.inputStr("Input courier phone number\n")
         create_phone_num(temp_dict, input_info_str)
     id_generator_create(temp_dict)
-    sorted_temp_dict = {key: value for key, value in sorted(temp_dict.items())}   
+    sorted_temp_dict = sort_temp_dict(temp_dict)
     append_to_dict_to_list(list_type, sorted_temp_dict)
     return view_list(list_type, menu_type)
 

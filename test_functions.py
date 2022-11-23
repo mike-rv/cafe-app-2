@@ -70,6 +70,11 @@ def test_create_phone_num():
     expected = {"id": "", "name": "coke", "phone_number": "0800123321"}
     assert x.create_phone_num(temp_dict, input_name) == expected
     
+def test_sort_temp_dict():
+    temp_dict = { "name": "coke", "phone_number": "", "id": ""}
+    expected = {"id": "", "name": "coke", "phone_number": ""}
+    assert x.sort_temp_dict(temp_dict) == expected
+    
 def test_append_dict_to_list():
     temp_dict = {"id": "ce", "name": "coke", "price": 1.0}
     list_type = []

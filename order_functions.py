@@ -35,8 +35,6 @@ def create_order(list_type, menu_type):
                     if not product_id_info:
                         a.incorrect_input()
                     else:
-                        # print("id str list=", id_str_list , "id=", id)
-                        # print("temp_dict[key]=", temp_dict[key] ,"id_str_list[:-1]=", id_str_list[:-1])
                         add_product_ids(id_str_list, id, temp_dict, key)
             elif key == "courier_id":
                 for courier in fh.couriers_list:

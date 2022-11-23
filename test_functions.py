@@ -63,17 +63,25 @@ def test_create_name_bad_path():
             input_name = 12345
             expected = {"id": "", "name": "coke", "price": ""}
             assert x.create_name(temp_dict, input_name) == expected
+            
+def test_create_phone_num_bad_path():
+    with pytest.raises(AssertionError):
+        temp_dict = {"id": "", "name": "coke", "phone_number": ""}
+        input_name = "cheese"
+        expected = {"id": "", "name": "coke", "phone_number": "0800123321"}
+        assert x.create_phone_num(temp_dict, input_name) == expected
+    
+def test_sort_temp_dict():
+    temp_dict = { "name": "coke", "phone_number": "", "id": ""}
+    expected = {"id": "", "name": "coke", "phone_number": ""}
+    assert x.sort_temp_dict(temp_dict) == expected
+    
     
 def test_create_phone_num():
     temp_dict = {"id": "", "name": "coke", "phone_number": ""}
     input_name = "0800123321"
     expected = {"id": "", "name": "coke", "phone_number": "0800123321"}
     assert x.create_phone_num(temp_dict, input_name) == expected
-    
-def test_sort_temp_dict():
-    temp_dict = { "name": "coke", "phone_number": "", "id": ""}
-    expected = {"id": "", "name": "coke", "phone_number": ""}
-    assert x.sort_temp_dict(temp_dict) == expected
     
 def test_append_dict_to_list():
     temp_dict = {"id": "ce", "name": "coke", "price": 1.0}
@@ -109,10 +117,10 @@ def test_delete_record():
     expected = None
     assert x.delete_record(list_type, index) == expected
     
-def test_delete_order_record():
-    order_number = 0
-    expected = None
-    assert x.delete_order_record(order_number) == expected    
+# def test_delete_order_record():
+#     order_number = 1
+#     expected = None
+#     assert x.delete_order_record(order_number) == expected    
         
 def test_exit_main_menu(monkeypatch):
     inputs = StringIO('0\n')

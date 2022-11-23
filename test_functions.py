@@ -37,6 +37,15 @@ def test_print_whole_list(monkeypatch: MonkeyPatch):
 def test_orders_list(monkeypatch: MonkeyPatch):
     expected = {'customer_name': 'Max', 'customer_address': 'Thun_project/cafe_app_project_2 (main)derdome, Desert Apocalypse', 'customer_phone_number': '035435435', 'product_id_index': '', 'courier_id': '', 'status': 'preparing'}
     assert x.print_orders_list() == expected
+    
+@mock.patch("builtins.input", return_value="cake")
+def test_user_input_info_str(monkeypatch: MonkeyPatch):
+    assert x.input_info_str() == "cake"
+
+@mock.patch("builtins.input", return_value="cake")
+def test_user_input_info_str_bad_path(monkeypatch: MonkeyPatch):
+    with pytest.raises(AssertionError):
+        assert x.input_info_str() == "waffles"
 
 def test_create_temp_dict_happy_path():
     menu_type = "product"

@@ -73,8 +73,9 @@ def create(list_type, menu_type):
     else:
         input_info_str = ip.inputStr("Input courier phone number\n")
         create_phone_num(temp_dict, input_info_str)
-    id_generator_create(temp_dict)   
-    append_to_dict_to_list(list_type, temp_dict)
+    id_generator_create(temp_dict)
+    sorted_temp_dict = {key: value for key, value in sorted(temp_dict.items())}   
+    append_to_dict_to_list(list_type, sorted_temp_dict)
     return view_list(list_type, menu_type)
 
 def update_price(list_type, index, key, input_info):

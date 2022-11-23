@@ -196,3 +196,17 @@
 #     expected = None
 #     assert x.delete_order_record(order_number) == expected    
         
+# @mock.patch("builtins.print", return_value={'customer_name': 'Max', 'customer_address': 'Thun_project/cafe_app_project_2 (main)derdome, Desert Apocalypse', 'customer_phone_number': '035435435', 'product_id_index': '', 'courier_id': '', 'status': 'preparing'})
+# def test_orders_list(monkeypatch: MonkeyPatch):
+#     expected = {'customer_name': 'Max', 'customer_address': 'Thun_project/cafe_app_project_2 (main)derdome, Desert Apocalypse', 'customer_phone_number': '035435435', 'product_id_index': '', 'courier_id': '', 'status': 'preparing'}
+#     assert x.print_orders_list() == expected
+
+
+# def print_orders_list():
+#     orders_list = ""
+#     for order in fh.sorted_orders_list:
+#         orders_list += f"{order}\n"
+#     return print(orders_list)
+
+    # elif menu_type == 'order':
+    #     print_orders_list()

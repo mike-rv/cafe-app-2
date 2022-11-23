@@ -8,18 +8,10 @@ def print_whole_list(list_type):
         whole_list += f"{item}\n"
     return print(whole_list)
 
-def print_orders_list():
-    orders_list = ""
-    for order in fh.sorted_orders_list:
-        orders_list += f"{order}\n"
-    return print(orders_list)
-
 def view_list(list_type, menu_type):
     if len(list_type) == 0:
         print(f"{menu_type.title()} list is empty.\n")
         a.sub_menu(list_type, menu_type)
-    elif menu_type == 'order':
-        print_orders_list()
     else:
         print_whole_list(list_type)
         a.sub_menu(list_type, menu_type)

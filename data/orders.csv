@@ -1,0 +1,6 @@
+customer_name,customer_address,customer_phone_number,product_id_index,courier_id,status
+Carlton,"1 Vim Street, LONDON, SH1 2ER",0789887334,,,preparing
+Patrick,"PPP Zone, London",0800111111,,dispatched,
+Luigi,Mushroom Kingdom,04354045464,,dispatched,
+Max,"Thunderdome, Desert Apocalypse",035435435,,,preparing
+Sheikh,East Endz,06540560,,,preparing

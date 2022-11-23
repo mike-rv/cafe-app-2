@@ -32,4 +32,4 @@ else:
             {k: v for k, v in row.items()} for row in csv.DictReader(csv_file)
         ]
 
-sorted_orders_list = sorted(orders_list, key=lambda k: k['status']) 
+# sorted_orders_list = sorted(orders_list, key=lambda k: k['status']) 

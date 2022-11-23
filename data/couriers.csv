@@ -1,11 +1,6 @@
-id,name,phone_number
-
-Gr,Getir,05364453035
-
-Pe,Parcelforce,23254030354
-
-Do,Deliveroo,035435435
-
-Ge,Guy on a bike,043404340
-
-Fq,Faruuq,06546540643
+id,name,phone_number
+Gr,Getir,05364453035
+Pe,Parcelforce,23254030354
+Do,Deliveroo,035435435
+Ge,Guy on a bike,043404340
+Fq,Faruuq,06546540643

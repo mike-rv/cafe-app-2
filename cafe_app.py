@@ -31,14 +31,13 @@ def main_menu():
                 writer.writerow(list(fh.couriers_list[1].keys()))
             for i in range(len(fh.couriers_list)):
                 writer.writerow(list(fh.couriers_list[i].values()))
-
         with open("data\orders.csv", "w") as orders:
             writer = csv.writer(orders, delimiter=",")
             if fh.orders_list:
                 writer.writerow(list(fh.orders_list[1].keys()))
             for i in range(len(fh.orders_list)):
                 writer.writerow(list(fh.orders_list[i].values()))
-        return None  # return without the none is buggy...
+        return None
     elif cmd == "1":
         menu_type = "product"
         list_type = fh.products_list
@@ -104,7 +103,3 @@ def sub_menu(list_type, menu_type):
             incorrect_input()
     else:
         incorrect_input()
-
-
-# main_menu()
-# print('Have a nice day!')

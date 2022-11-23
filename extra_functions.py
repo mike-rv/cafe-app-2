@@ -64,20 +64,15 @@ def append_to_dict_to_list(list_type, temp_dict):
     list_type.append(temp_dict)
     return list_type
 
-def input_info_str():
-    input_info_str = ip.inputStr("Input name\n")
-    return input_info_str
-
 def create(list_type, menu_type):
     temp_dict = {}
     create_temp_dict(menu_type, temp_dict)
-    input_info_str = ""
-    input_info_str = input_info_str()
+    input_info_str = ip.inputStr("Input name\n")
     create_name(temp_dict, input_info_str)
     if menu_type == "product":
         input_info_float = ip.inputFloat("Input price\n")
         create_price(temp_dict, input_info_float)
-    else:
+    elif menu_type == "courier":
         input_info_str = ip.inputStr("Input courier phone number\n")
         create_phone_num(temp_dict, input_info_str)
     id_generator_create(temp_dict)
